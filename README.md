@@ -35,16 +35,6 @@ A simple and intuitive Chrome extension for converting between various units dir
 13. ✅ Click the "Convert" button to see the result.
 14. The converted value will be displayed in the "Result" section within the extension popup.
 
-## ⚙️ Functionality (To Implement with JavaScript)
-
-Your JavaScript file will need to handle the following:
-
-* Populating the unit options in the "From" and "To" dropdowns based on the selected "Unit Type".
-* Adding an event listener to the "Convert" button to perform the unit conversion based on the selected units and the entered value.
-* Implementing the logic for the unit conversions themselves.
-* Updating the "Result" `div` with the converted value within the extension's context.
-* Adding functionality to the "Swap Units" button to exchange the selected units in the dropdowns.
-
 ## 🎨 Customization
 
 Feel free to customize the look and feel of the extension by modifying the `style.css` file. Keep in mind the typical size and constraints of a Chrome extension popup.
