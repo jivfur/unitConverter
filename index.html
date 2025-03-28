@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Unit Converter</h1>
+
+        <div class="unit-type-selector">
+            <label for="unit-type">Select Unit Type:</label>
+            <select id="unit-type">
+                <option value="">-- Select --</option>
+                <option value="length">Length</option>
+                <option value="temperature">Temperature</option>
+                <option value="weight">Weight</option>
+                <option value="volume">Volume</option>
+                </select>
+        </div>
+
+        <div class="conversion-inputs">
+            <div class="input-group">
+                <label for="from-value">Value to Convert:</label>
+                <input type="number" id="from-value" placeholder="Enter Value">
+            </div>
+
+            <div class="unit-selection">
+                <div class="input-group">
+                    <label for="from-unit">From:</label>
+                    <select id="from-unit">
+                        <option value="">-- Select --</option>
+                        </select>
+                </div>
+
+                <button id="swap-units" aria-label="Swap Units">⇆</button>
+
+                <div class="input-group">
+                    <label for="to-unit">To:</label>
+                    <select id="to-unit">
+                        <option value="">-- Select --</option>
+                        </select>
+                </div>
+            </div>
+        </div>
+
+        <button id="convert-button">Convert</button>
+
+        <div class="result-container">
+            <h2>Result:</h2>
+            <div id="conversion-result"></div>
+        </div>
+    </div>
+
+    </body>
+</html>
