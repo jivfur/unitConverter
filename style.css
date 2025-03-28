@@ -6,6 +6,7 @@ body {
     justify-content: center;
     align-items: flex-start; /* Align items to the start to avoid vertical centering issues in extensions */
     min-height: auto; /* Adjust min-height for extension context */
+    min-width: 400px;
 }
 
 .container {
