@@ -216,7 +216,8 @@ const toUnitEl = document.getElementById("to-unit")
 const convertbtn = document.getElementById("convert-button")
 const fromValueEl = document.getElementById("from-value")
 const conversionResultEl = document.getElementById("conversion-result")
-
+const decimalPointEl = document.getElementById("decimal-points")
+let res = 0
 unitTypeEl.addEventListener("change", function () {
     fillUnitSelect(fromUnitEl, unitTypeEl.value)
     fillUnitSelect(toUnitEl, unitTypeEl.value)
@@ -224,8 +225,14 @@ unitTypeEl.addEventListener("change", function () {
 
 convertbtn.addEventListener("click", function () {
     if (unitTypeEl.value.length > 0 && fromValueEl.value.length > 0 && fromUnitEl.value.length > 0 && toUnitEl.value.length > 0) {
-        let res = convert(unitTypeEl.value, Number(fromValueEl.value), fromUnitEl.value, toUnitEl.value)
-        conversionResultEl.textContent = res
+        res = convert(unitTypeEl.value, Number(fromValueEl.value), fromUnitEl.value, toUnitEl.value)
+        conversionResultEl.textContent = `${res.toFixed(decimalPointEl.value)} ${toUnitEl.value}`
     }
 
+})
+
+decimalPointEl.addEventListener("change", function () {
+    if (conversionResultEl.textContent.length > 0) {
+        conversionResultEl.textContent = `${res.toFixed(decimalPointEl.value)} ${toUnitEl.value}`
+    }
 })
