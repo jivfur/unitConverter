@@ -1,0 +1,152 @@
+body {
+    font-family: sans-serif;
+    margin: 10px; /* Reduced margin */
+    background-color: #f9f9f9; /* Lighter background */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start to avoid vertical centering issues in extensions */
+    min-height: auto; /* Adjust min-height for extension context */
+}
+
+.container {
+    background-color: #fff;
+    padding: 15px; /* Reduced padding */
+    border-radius: 4px; /* Slightly smaller border-radius */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtler shadow */
+    width: 350px; /* Set a more typical width for an extension popup */
+    max-width: 350px; /* Ensure it doesn't exceed this width */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 15px; /* Reduced margin */
+    color: #333;
+    font-size: 1.5em; /* Slightly smaller heading */
+}
+
+.unit-type-selector {
+    margin-bottom: 15px; /* Reduced margin */
+}
+
+.unit-type-selector label {
+    display: block;
+    margin-bottom: 3px; /* Reduced margin */
+    color: #555;
+    font-size: 0.9em; /* Slightly smaller label */
+    font-weight: bold;
+}
+
+.unit-type-selector select {
+    width: calc(100% - 12px); /* Adjust for padding and border */
+    padding: 8px; /* Reduced padding */
+    border: 1px solid #ccc;
+    border-radius: 3px; /* Smaller border-radius */
+    font-size: 1em; /* Slightly smaller font size */
+}
+
+.conversion-inputs {
+    margin-bottom: 15px; /* Reduced margin */
+}
+
+.input-group {
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 3px; /* Reduced margin */
+    color: #555;
+    font-size: 0.9em; /* Slightly smaller label */
+    font-weight: bold;
+}
+
+.input-group input[type="number"],
+.input-group select {
+    width: calc(100% - 12px); /* Adjust for padding and border */
+    padding: 8px; /* Reduced padding */
+    border: 1px solid #ccc;
+    border-radius: 3px; /* Smaller border-radius */
+    font-size: 1em; /* Slightly smaller font size */
+}
+
+.unit-selection {
+    display: flex;
+    gap: 8px; /* Reduced gap */
+    align-items: center;
+}
+
+.unit-selection .input-group {
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+#swap-units {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2em; /* Slightly smaller swap icon */
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    padding: 5px; /* Add some padding for better touch/click area */
+}
+
+#swap-units:hover {
+    opacity: 1;
+}
+
+#convert-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px; /* Reduced padding */
+    border: none;
+    border-radius: 3px; /* Smaller border-radius */
+    font-size: 1em; /* Slightly smaller font size */
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#convert-button:hover {
+    background-color: #0056b3;
+}
+
+.result-container {
+    margin-top: 20px; /* Reduced margin */
+    padding: 10px; /* Reduced padding */
+    border: 1px solid #eee;
+    border-radius: 3px; /* Smaller border-radius */
+    background-color: #f9f9f9;
+}
+
+.result-container h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1em; /* Smaller result heading */
+    margin-bottom: 8px; /* Reduced margin */
+}
+
+#conversion-result {
+    font-size: 1.2em; /* Smaller result text */
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Responsive Design (Adjusted for Extension Context) */
+@media (max-width: 400px) { /* Slightly lower breakpoint */
+    .container {
+        width: 95%; /* Take up more width on very small screens */
+        max-width: none; /* Remove max-width on very small screens */
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .unit-selection {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .unit-selection button {
+        width: 60%; /* Slightly wider swap button on small screens */
+        margin: 5px auto;
+    }
+}

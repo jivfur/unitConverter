@@ -16,7 +16,7 @@ A simple and intuitive Chrome extension for converting between various units dir
 
 * 📖 HTML5
 * 💧 CSS3
-* 💻 JavaScript (for the conversion logic - you've got this!)
+* 💻 JavaScript
 
 ## 🚀 How to Use
 
